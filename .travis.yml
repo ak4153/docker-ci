@@ -12,3 +12,5 @@ install:
 # Command to run tests
 script:
   - python -m unittest discover
+env:
+  - REDIS_HOST=localhost
