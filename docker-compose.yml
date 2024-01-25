@@ -11,8 +11,8 @@ services:
     environment:
       - FLASK_APP=server.py
       - FLASK_RUN_HOST=0.0.0.0
+      - REDIS_HOST=redis
     container_name: redis_flask
+    
   redis:
     image: "redis"
-  env:
-    - REDIS_HOST=localhost
