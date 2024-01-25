@@ -8,7 +8,7 @@ redis = Redis(host=redis_host, port=6379)
 @app.route('/')
 def hello_world():
     redis.incr('hits',amount=1)
-    return '<html><body><h1>Hello, World!</h1></body></html>'
+    return '<html><body><h1>New Feature!</h1></body></html>'
 
 
 if __name__ == '__main__':
