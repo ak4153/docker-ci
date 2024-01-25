@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web:
+    image: hit_counter
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+    environment:
+      - FLASK_APP=server.py
+      - FLASK_RUN_HOST=0.0.0.0
+    container_name: redis_flask
+  redis:
+    image: "redis"
